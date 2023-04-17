@@ -3,6 +3,7 @@ import 'package:boj_ministries/Home/presentation/widgets/footer_icons.dart';
 import 'package:boj_ministries/Home/presentation/widgets/header.dart';
 import 'package:boj_ministries/Home/presentation/widgets/menu_drawer.dart';
 import 'package:boj_ministries/Home/presentation/widgets/nav_item.dart';
+import 'package:boj_ministries/theming/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -18,9 +19,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final themeData = AppTheme.of(context);
     const containerSize = 250.0;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: themeData.secondary,
       extendBodyBehindAppBar: true,
       appBar: const PreferredSize(
         preferredSize: Size(double.infinity, toolbarHeight),
@@ -42,14 +44,14 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   Column(
-                    children: const [
+                    children: [
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
                         child: Text(
                           "But He was wounded for our transgressions, He was bruised for our iniquities; the chastisement for our peace was upon Him, and by His stripes we are healed",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            color: Colors.white,
+                            color: themeData.secondary,
                             fontStyle: FontStyle.italic,
                             fontWeight: FontWeight.w200,
                             fontSize: 20,
@@ -57,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           horizontal: 20.0,
                           vertical: 10.0,
                         ),
@@ -65,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                           "Isaiah 53:5",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            color: Colors.white,
+                            color: themeData.secondary,
                             fontStyle: FontStyle.italic,
                             fontWeight: FontWeight.w200,
                             fontSize: 30,
@@ -84,14 +86,14 @@ class _HomePageState extends State<HomePage> {
                           height: containerSize,
                           width: size.width / 2,
                           decoration: BoxDecoration(
-                              color: const Color(0xFF7A0424),
+                              color: themeData.primary,
                               borderRadius: BorderRadius.circular(30)),
                         ),
                         Container(
                           height: (containerSize * 9) / 10,
                           width: size.width,
                           decoration: BoxDecoration(
-                              color: const Color(0xFF7A0424),
+                              color: themeData.primary,
                               borderRadius: BorderRadius.circular(30)),
                         ),
                       ],
@@ -128,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
                               shape: const StadiumBorder(),
-                              backgroundColor: const Color(0xFF7A0424),
+                              backgroundColor: themeData.primary,
                               shadowColor: Colors.black.withOpacity(0.5),
                             ),
                             child: const Padding(
@@ -168,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                     for (var i = 1; i < 1000; i++)
                       Container(
                         decoration: BoxDecoration(
-                          color: const Color(0xFF7A0424),
+                          color: themeData.primary,
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Stack(
@@ -181,8 +183,8 @@ class _HomePageState extends State<HomePage> {
                             ),
                             Text(
                               'MINISTRY$i',
-                              style: const TextStyle(
-                                color: Colors.white,
+                              style: TextStyle(
+                                color: themeData.secondary,
                                 fontWeight: FontWeight.w900,
                                 fontSize: 20,
                               ),
@@ -197,9 +199,9 @@ class _HomePageState extends State<HomePage> {
                 height: 300,
                 width: double.infinity,
                 margin: const EdgeInsets.only(top: 10),
-                decoration: const BoxDecoration(
-                  color: Color(0xFF7A0424),
-                  borderRadius: BorderRadius.only(
+                decoration: BoxDecoration(
+                  color: themeData.primary,
+                  borderRadius: const BorderRadius.only(
                     topRight: Radius.circular(30),
                     topLeft: Radius.circular(30),
                   ),
@@ -252,36 +254,36 @@ class _HomePageState extends State<HomePage> {
                                         CrossAxisAlignment.start,
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
-                                    children: const [
-                                      NavItems(
+                                    children: [
+                                      const NavItems(
                                         text: "Contact",
                                         active: true,
                                       ),
                                       Text(
                                         "Call: 116A 65X69 432C \nFrancc. Yucalpetem Merida \nYucatan Mexico",
                                         style: TextStyle(
-                                          color: Colors.white,
+                                          color: themeData.secondary,
                                           fontSize: 12,
                                         ),
                                       ),
-                                      FooterIcons()
+                                      const FooterIcons()
                                     ],
                                   )
                                 ],
                               ),
                             ),
                           ),
-                          const Divider(
+                          Divider(
                             thickness: 2,
-                            color: Colors.white24,
+                            color: themeData.inactive,
                           ),
                           Container(
                             height: 40,
                             alignment: Alignment.center,
-                            child: const Text(
+                            child: Text(
                               "Copyrights: 2020 BOJ Ministries. All Rights reserved",
                               style: TextStyle(
-                                color: Colors.white,
+                                color: themeData.secondary,
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
                                 fontStyle: FontStyle.italic,

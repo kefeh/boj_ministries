@@ -1,5 +1,6 @@
 import 'package:boj_ministries/Home/helper/constants.dart';
 import 'package:boj_ministries/layout/responsive_padding.dart';
+import 'package:boj_ministries/theming/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -7,6 +8,7 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = AppTheme.of(context);
     return ResponsivePadding(
       small: paddingSmall,
       medium: paddingMedium,
@@ -16,7 +18,7 @@ class Header extends StatelessWidget {
         elevation: 0,
         automaticallyImplyLeading: false,
         toolbarHeight: toolbarHeight,
-        backgroundColor: Colors.white,
+        backgroundColor: theme.secondary,
         titleSpacing: 0,
         actions: [
           Container(
@@ -32,9 +34,9 @@ class Header extends StatelessWidget {
                     scaffoldState.openEndDrawer();
                   }
                 },
-                icon: const Icon(
+                icon: Icon(
                   Icons.menu_rounded,
-                  color: Color.fromRGBO(122, 4, 36, 1),
+                  color: theme.primary,
                 ),
               ),
             ),

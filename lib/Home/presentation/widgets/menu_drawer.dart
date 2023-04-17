@@ -1,4 +1,5 @@
 import 'package:boj_ministries/Home/helper/constants.dart';
+import 'package:boj_ministries/theming/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -10,16 +11,17 @@ class MenuDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const Radius radius = Radius.circular(8);
+    final theme = AppTheme.of(context);
     return Drawer(
       // Add a ListView to the drawer. This ensures the user can scroll
       // through the options in the drawer if there isn't enough vertical
       // space to fit everything.
-      shape: const RoundedRectangleBorder(
+      shape: RoundedRectangleBorder(
         side: BorderSide(
-          color: Color.fromRGBO(122, 4, 36, 1),
+          color: theme.primary,
           width: 2,
         ),
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: radius,
           bottomLeft: radius,
         ),
@@ -37,9 +39,9 @@ class MenuDrawer extends StatelessWidget {
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: paddingSmall),
                   trailing: const Text('Item 1'),
-                  leading: const Icon(
+                  leading: Icon(
                     Icons.home,
-                    color: Color.fromRGBO(122, 4, 36, 1),
+                    color: theme.primary,
                   ),
                   onTap: () {
                     // Update the state of the app
@@ -52,9 +54,9 @@ class MenuDrawer extends StatelessWidget {
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: paddingSmall),
                   trailing: const Text('Item 1'),
-                  leading: const Icon(
+                  leading: Icon(
                     Icons.home,
-                    color: Color.fromRGBO(122, 4, 36, 1),
+                    color: theme.primary,
                   ),
                   onTap: () {
                     // Update the state of the app
@@ -67,9 +69,9 @@ class MenuDrawer extends StatelessWidget {
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: paddingSmall),
                   trailing: const Text('Item 1'),
-                  leading: const Icon(
+                  leading: Icon(
                     Icons.home,
-                    color: Color.fromRGBO(122, 4, 36, 1),
+                    color: theme.primary,
                   ),
                   onTap: () {
                     // Update the state of the app
@@ -82,9 +84,9 @@ class MenuDrawer extends StatelessWidget {
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: paddingSmall),
                   trailing: const Text('Item 1'),
-                  leading: const Icon(
+                  leading: Icon(
                     Icons.home,
-                    color: Color.fromRGBO(122, 4, 36, 1),
+                    color: theme.primary,
                   ),
                   onTap: () {
                     // Update the state of the app
@@ -97,9 +99,9 @@ class MenuDrawer extends StatelessWidget {
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: paddingSmall),
                   trailing: const Text('Item 1'),
-                  leading: const Icon(
+                  leading: Icon(
                     Icons.home,
-                    color: Color.fromRGBO(122, 4, 36, 1),
+                    color: theme.primary,
                   ),
                   onTap: () {
                     // Update the state of the app
@@ -112,9 +114,9 @@ class MenuDrawer extends StatelessWidget {
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: paddingSmall),
                   trailing: const Text('Item 1'),
-                  leading: const Icon(
+                  leading: Icon(
                     Icons.home,
-                    color: Color.fromRGBO(122, 4, 36, 1),
+                    color: theme.primary,
                   ),
                   onTap: () {
                     // Update the state of the app
@@ -127,9 +129,9 @@ class MenuDrawer extends StatelessWidget {
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: paddingSmall),
                   trailing: const Text('Item 1'),
-                  leading: const Icon(
+                  leading: Icon(
                     Icons.home,
-                    color: Color.fromRGBO(122, 4, 36, 1),
+                    color: theme.primary,
                   ),
                   onTap: () {
                     // Update the state of the app
@@ -142,9 +144,9 @@ class MenuDrawer extends StatelessWidget {
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: paddingSmall),
                   trailing: const Text('Item 1'),
-                  leading: const Icon(
+                  leading: Icon(
                     Icons.home,
-                    color: Color.fromRGBO(122, 4, 36, 1),
+                    color: theme.primary,
                   ),
                   onTap: () {
                     // Update the state of the app
@@ -157,9 +159,9 @@ class MenuDrawer extends StatelessWidget {
                   contentPadding:
                       const EdgeInsets.symmetric(horizontal: paddingSmall),
                   trailing: const Text('Item 1'),
-                  leading: const Icon(
+                  leading: Icon(
                     Icons.home,
-                    color: Color.fromRGBO(122, 4, 36, 1),
+                    color: theme.primary,
                   ),
                   onTap: () {
                     // Update the state of the app

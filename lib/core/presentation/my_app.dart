@@ -1,4 +1,5 @@
 import 'package:boj_ministries/Home/presentation/home_page.dart';
+import 'package:boj_ministries/theming/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -12,7 +13,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(title: 'Flutter Demo Home Page'),
+      home: AppTheme(
+        data: AppThemeData.defaultTheme(),
+        child: const HomePage(title: 'Flutter Demo Home Page'),
+      ),
     );
   }
 }
